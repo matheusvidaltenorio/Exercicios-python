@@ -1,5 +1,5 @@
-valor = int(input('\nDigite o valor em REAL: R$'))
-conversao = (valor*3.27)
+valor = float(input('\nDigite o valor em REAL: R$'))
+conversao = (valor/3.27)
 print('='*60)
 print('Se você tiver {}, e for converter para dolar, você terá R${:.2f}'.format(valor, conversao))
 print('='*60)
