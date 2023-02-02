@@ -1,0 +1,8 @@
+nome = str(input('Digite seu nome completo: '))
+qtd_letras = len(nome.strip())
+dividido = nome.split()
+print('Seu nome em Maiúsculo é :'+nome.upper())
+print('Seu nome em Minúsculo é :'+nome.lower())
+print('Seu tem {} letras:'.format(qtd_letras - nome.count(' ')))
+print('Seu primeiro nome é {}:'.format(dividido[0]))
+print('Seu primeiro nome tem {}'.format(nome.find(' ')))
