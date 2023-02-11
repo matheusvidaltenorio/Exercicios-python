@@ -4,13 +4,16 @@ opc_pag = int(input("Digite sua opção de pagamento:\n1 - À VISTA DINHEIRO/CHE
 
 if opc_pag == 1:
     cal = valor_prod-(valor_prod*10/100)
-    print("Você escolheu o modo À VISTA, terá 10% de desconto, O preço é {}, e ficará por {}".format(valor_prod, cal))
+    print("Você escolheu o modo À VISTA, terá 10% de desconto, O preço é {:.2f}, e ficará por {:.2f}".format(valor_prod, cal))
 elif opc_pag == 2:
     cal = valor_prod-(valor_prod*5/100)
-    print("Você escolheu o modo À VISTA, terá 10% de desconto, O preço é {}, e ficará por {}".format(valor_prod, cal))
+    print("Você escolheu o modo À VISTA PORÉM NO CARTÃO, terá 5% de desconto, O preço é {:.2f}, e ficará por {:.2f}".format(valor_prod, cal))
 elif opc_pag == 3:
     cal = valor_prod
-    print("Você escolheu o modo À VISTA, terá 10% de desconto, O preço é {}, e ficará por {}".format(valor_prod, cal))
-else:
+    print("Você escolheu o modo CARTÃO EM ATÉ 2X, terá 10% de desconto, O preço é {:.2f}, e ficará por {:.2f}".format(valor_prod, cal))
+elif opc_pag == 4:
+    parcelas = int(input("Quantas parcelas serão? "))
     cal = valor_prod + (valor_prod * 20 / 100)
-    print("Você escolheu o modo À VISTA, terá 10% de desconto, O preço é {}, e ficará por {}".format(valor_prod, cal))
+    print('Você escolheu o modo CARTÃO E QUIS DIVIDIR EM {:.2f}x de R${:.2f} , O preço é {:.2f}, e ficará por {:.2f}'.format(parcelas, (cal / parcelas), valor_prod, cal))
+else:
+    print("Erro de código, porfavor informe novamente a forma de opção..")
