@@ -1,26 +1,21 @@
-n = int(input('Digite um valor: '))
-cont = 0
-soma = 0
-maior = 0
-menor = 0
-media = 0
-while n != 0:
-    if n != 0:
-        if cont == 0:
-            maior = n
-            menor = n
-        else:
-            if n > maior:
-                maior = n
-            if n < menor:
-                menor = n
-        soma += n
-        cont += 1
-        media = soma / cont
-
+cont = soma = maior = menor = media = 0
+resp = 'S'
+while resp == 's' or resp == 'S':
     n = int(input('Digite um valor: '))
+    soma += n
+    cont += 1
+    if cont == 1:
+        maior = n
+        menor = n
+    else:
+        if n > maior:
+            maior = n
+        if n < menor:
+            menor = n
 
-
-print('A média dos valores foi {:.2f}'.format(media))
+    resp = str(input('Quer continuar [S/N]')).upper().split()[0]
+media = soma / cont
+print('\nAcabou')
+print('A média dos valores foi {}'.format(media))
 print('O maior valor é {}'.format(maior))
 print('O menor valor é {}'.format(menor))
