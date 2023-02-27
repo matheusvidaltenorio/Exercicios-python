@@ -1,0 +1,1 @@
+listagem = ('Pão', 1.00, 'Frango', 10.90, 'Pêra', 2.50, 'Leite', 5.00)
